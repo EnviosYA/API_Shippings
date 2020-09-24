@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "PS.Template.Application/1.0.0": {
+        "dependencies": {
+          "PS.Template.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PS.Template.Application.dll": {}
+        }
+      },
+      "PS.Template.Domain/1.0.0": {
+        "runtime": {
+          "PS.Template.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PS.Template.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Template.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
