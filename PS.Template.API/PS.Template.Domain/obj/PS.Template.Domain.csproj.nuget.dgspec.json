@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {}
+    "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
+    "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
+        "projectUniqueName": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
         "projectName": "PS.Template.Domain",
-        "projectPath": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
-        "packagesPath": "C:\\Users\\LeanLima\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Domain\\obj\\",
+        "projectPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
+        "packagesPath": "C:\\Users\\Shiki\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeanLima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Shiki\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,22 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

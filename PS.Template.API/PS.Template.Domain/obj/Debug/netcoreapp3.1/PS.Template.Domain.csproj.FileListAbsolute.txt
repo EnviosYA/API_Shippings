@@ -7,3 +7,11 @@ D:\Archivos\Documentos\PruebasPS\PS.Template.API\PS.Template.Domain\obj\Debug\ne
 D:\Archivos\Documentos\PruebasPS\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache
 D:\Archivos\Documentos\PruebasPS\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
 D:\Archivos\Documentos\PruebasPS\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.deps.json
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.dll
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csprojAssemblyReference.cache
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfoInputs.cache
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfo.cs
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
+C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb

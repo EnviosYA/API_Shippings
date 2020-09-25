@@ -2888,6 +2888,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "PS.Template.Domain": "1.0.0"
         },
         "compile": {
@@ -2900,6 +2902,10 @@
       "PS.Template.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"
+        },
         "compile": {
           "bin/placeholder/PS.Template.Domain.dll": {}
         },
@@ -9208,19 +9214,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LeanLima\\.nuget\\packages\\": {}
+    "C:\\Users\\Shiki\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.API\\PS.Template.API.csproj",
+      "projectUniqueName": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.API\\PS.Template.API.csproj",
       "projectName": "PS.Template.API",
-      "projectPath": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.API\\PS.Template.API.csproj",
-      "packagesPath": "C:\\Users\\LeanLima\\.nuget\\packages\\",
-      "outputPath": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.API\\obj\\",
+      "projectPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.API\\PS.Template.API.csproj",
+      "packagesPath": "C:\\Users\\Shiki\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LeanLima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shiki\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9233,11 +9239,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.AccessData\\PS.Template.AccessData.csproj": {
-              "projectPath": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.AccessData\\PS.Template.AccessData.csproj"
+            "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.AccessData\\PS.Template.AccessData.csproj": {
+              "projectPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.AccessData\\PS.Template.AccessData.csproj"
             },
-            "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj": {
-              "projectPath": "D:\\Archivos\\Documentos\\PruebasPS\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj"
+            "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj": {
+              "projectPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj"
             }
           }
         }
@@ -9304,7 +9310,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
