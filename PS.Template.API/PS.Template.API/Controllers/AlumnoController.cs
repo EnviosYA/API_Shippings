@@ -44,7 +44,6 @@ namespace PS.Template.API.Controllers
             }
         }
 
-
         [HttpGet]
         public ActionResult<bool> Get(AlumnoDto alumno)
         {
