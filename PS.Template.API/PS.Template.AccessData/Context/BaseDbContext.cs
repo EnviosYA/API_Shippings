@@ -43,12 +43,6 @@ namespace PS.Template.AccessData
                 entity.Property(e => e.IdUserDestino).HasColumnName("idUserDestino");
 
                 entity.Property(e => e.IdUserOrigen).HasColumnName("idUserOrigen");
-
-                entity.HasOne(d => d.CodPaqueteNavigation)
-                    .WithMany(p => p.Envio)
-                    .HasForeignKey(d => d.CodPaquete)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Envio_Paquete");
             });
 
             modelBuilder.Entity<Estado>(entity =>
@@ -59,7 +53,7 @@ namespace PS.Template.AccessData
                     .HasColumnName("idEstado")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.Descripción)
+                entity.Property(e => e.Descripcion)
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -71,6 +65,14 @@ namespace PS.Template.AccessData
 
                 entity.Property(e => e.IdPaquete)
                     .HasColumnName("idPaquete");
+
+                entity.Property(e => e.IdEnvio).HasColumnName("idEnvio");
+
+                entity.HasOne(d => d.EnvioNavigation)
+                    .WithMany(p => p.Paquete)
+                    .HasForeignKey(d => d.IdEnvio)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Paquete_Envio");
 
                 entity.Property(e => e.IdTipoPaquete).HasColumnName("idTipoPaquete");
 
@@ -169,19 +171,19 @@ namespace PS.Template.AccessData
                     new Estado
                     {
                         IdEstado = 1,
-                        Descripción = "Ingreso a la sucursal"
+                        Descripcion = "Ingreso a la sucursal"
                     });
                 entity.HasData(
                     new Estado
                     {
                         IdEstado = 2,
-                        Descripción = "En espera"
+                        Descripcion = "En espera"
                     });
                 entity.HasData(
                     new Estado
                     {
                         IdEstado = 3,
-                        Descripción = "Despachado"
+                        Descripcion = "Despachado"
                     });
             });
 

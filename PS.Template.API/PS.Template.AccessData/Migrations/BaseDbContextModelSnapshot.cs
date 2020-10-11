@@ -27,9 +27,6 @@ namespace PS.Template.AccessData.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CodPaquete")
-                        .HasColumnType("int");
-
                     b.Property<int>("Costo")
                         .HasColumnType("int");
 
@@ -51,8 +48,6 @@ namespace PS.Template.AccessData.Migrations
 
                     b.HasKey("IdEnvio");
 
-                    b.HasIndex("CodPaquete");
-
                     b.ToTable("Envio");
                 });
 
@@ -62,7 +57,7 @@ namespace PS.Template.AccessData.Migrations
                         .HasColumnName("idEstado")
                         .HasColumnType("int");
 
-                    b.Property<string>("Descripción")
+                    b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("varchar(50)")
                         .HasMaxLength(50)
@@ -76,17 +71,17 @@ namespace PS.Template.AccessData.Migrations
                         new
                         {
                             IdEstado = 1,
-                            Descripción = "En espera"
+                            Descripcion = "Ingreso a la sucursal"
                         },
                         new
                         {
                             IdEstado = 2,
-                            Descripción = "Despachado"
+                            Descripcion = "En espera"
                         },
                         new
                         {
                             IdEstado = 3,
-                            Descripción = "Ingreso a la sucursal"
+                            Descripcion = "Despachado"
                         });
                 });
 
@@ -104,10 +99,11 @@ namespace PS.Template.AccessData.Migrations
                     b.Property<int>("Ancho")
                         .HasColumnType("int");
 
-                    b.Property<int>("CodPaquete")
+                    b.Property<int>("Dimension")
                         .HasColumnType("int");
 
-                    b.Property<int>("Dimension")
+                    b.Property<int>("IdEnvio")
+                        .HasColumnName("idEnvio")
                         .HasColumnType("int");
 
                     b.Property<int>("IdTipoPaquete")
@@ -124,6 +120,8 @@ namespace PS.Template.AccessData.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("IdPaquete");
+
+                    b.HasIndex("IdEnvio");
 
                     b.HasIndex("IdTipoPaquete");
 
@@ -214,17 +212,14 @@ namespace PS.Template.AccessData.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PS.Template.Domain.Entities.Envio", b =>
-                {
-                    b.HasOne("PS.Template.Domain.Entities.Paquete", "CodPaqueteNavigation")
-                        .WithMany("Envio")
-                        .HasForeignKey("CodPaquete")
-                        .HasConstraintName("FK_Envio_Paquete")
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("PS.Template.Domain.Entities.Paquete", b =>
                 {
+                    b.HasOne("PS.Template.Domain.Entities.Envio", "EnvioNavigation")
+                        .WithMany("Paquete")
+                        .HasForeignKey("IdEnvio")
+                        .HasConstraintName("FK_Paquete_Envio")
+                        .IsRequired();
+
                     b.HasOne("PS.Template.Domain.Entities.TipoPaquete", "IdTipoPaqueteNavigation")
                         .WithMany("Paquete")
                         .HasForeignKey("IdTipoPaquete")

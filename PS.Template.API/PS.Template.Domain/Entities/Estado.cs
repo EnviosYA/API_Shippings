@@ -11,7 +11,7 @@ namespace PS.Template.Domain.Entities
         }
 
         public int IdEstado { get; set; }
-        public string Descripción { get; set; }
+        public string Descripcion { get; set; }
 
         public virtual ICollection<SucursalPorEnvio> SucursalPorEnvio { get; set; }
     }

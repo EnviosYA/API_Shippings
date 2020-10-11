@@ -1,18 +1,12 @@
-using System;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using PS.Template.AccessData;
 using Microsoft.EntityFrameworkCore;
 using PS.Template.Application.Services;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Http;
 using PS.Template.Domain.Interfaces.Repositories;
 using PS.Template.AccessData.Repositories;
 using PS.Template.Domain.Interfaces.Service;
@@ -51,18 +45,25 @@ namespace PS.Template.API
                 return new SqlConnection(connectionString);
             });
 
+            // Paquete
             services.AddTransient<IPaqueteRepository, PaqueteRepository>();
             services.AddTransient<IPaqueteService, PaqueteService>();
             services.AddTransient<IPaqueteQuery, PaqueteQuery>();
 
+            // Tipo Paquete
             services.AddTransient<ITipoPaqueteRepository, TipoPaqueteRepository>();
             services.AddTransient<ITipoPaqueteService, TipoPaqueteService>();
             services.AddTransient<ITipoPaqueteQuery, TipoPaqueteQuery>();
 
+            // Sucursal por Envío
             services.AddTransient<ISucursalPorEnvioRepository, SucursalPorEnvioRepository>();
             services.AddTransient<ISucursalPorEnvioService, SucursalPorEnvioService>();
             services.AddTransient<ISucursalPorEnvioQuery, SucursalPorEnvioQuery>();
 
+            // Estado
+            services.AddTransient<IEstadoRepository, EstadoRepository>();
+            services.AddTransient<IEstadoService, EstadoService>();
+            services.AddTransient<IEstadoQuery, EstadoQuery>();
 
             services.AddSwaggerGen(c =>
             {

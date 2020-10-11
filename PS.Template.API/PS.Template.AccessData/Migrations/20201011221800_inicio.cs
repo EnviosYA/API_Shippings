@@ -3,16 +3,33 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PS.Template.AccessData.Migrations
 {
-    public partial class init : Migration
+    public partial class inicio : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Envio",
+                columns: table => new
+                {
+                    idEnvio = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    idSucOrigen = table.Column<int>(nullable: false),
+                    idSucDestino = table.Column<int>(nullable: false),
+                    idUserOrigen = table.Column<int>(nullable: false),
+                    idUserDestino = table.Column<int>(nullable: false),
+                    Costo = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Envio", x => x.idEnvio);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Estado",
                 columns: table => new
                 {
                     idEstado = table.Column<int>(nullable: false),
-                    Descripción = table.Column<string>(unicode: false, maxLength: 50, nullable: false)
+                    Descripcion = table.Column<string>(unicode: false, maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,53 +47,6 @@ namespace PS.Template.AccessData.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TipoPaquete", x => x.idTipoPaquete);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Paquete",
-                columns: table => new
-                {
-                    idPaquete = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Peso = table.Column<int>(nullable: false),
-                    Valor = table.Column<int>(nullable: false),
-                    CodPaquete = table.Column<int>(nullable: false),
-                    Dimension = table.Column<int>(nullable: false),
-                    idTipoPaquete = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Paquete", x => x.idPaquete);
-                    table.ForeignKey(
-                        name: "FK_Paquete_TipoPaquete",
-                        column: x => x.idTipoPaquete,
-                        principalTable: "TipoPaquete",
-                        principalColumn: "idTipoPaquete",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Envio",
-                columns: table => new
-                {
-                    idEnvio = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    idSucOrigen = table.Column<int>(nullable: false),
-                    idSucDestino = table.Column<int>(nullable: false),
-                    idUserOrigen = table.Column<int>(nullable: false),
-                    idUserDestino = table.Column<int>(nullable: false),
-                    CodPaquete = table.Column<int>(nullable: false),
-                    Costo = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Envio", x => x.idEnvio);
-                    table.ForeignKey(
-                        name: "FK_Envio_Paquete",
-                        column: x => x.CodPaquete,
-                        principalTable: "Paquete",
-                        principalColumn: "idPaquete",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -107,14 +77,46 @@ namespace PS.Template.AccessData.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Paquete",
+                columns: table => new
+                {
+                    idPaquete = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Peso = table.Column<int>(nullable: false),
+                    Valor = table.Column<int>(nullable: false),
+                    Largo = table.Column<int>(nullable: false),
+                    Ancho = table.Column<int>(nullable: false),
+                    Alto = table.Column<int>(nullable: false),
+                    Dimension = table.Column<int>(nullable: false),
+                    idTipoPaquete = table.Column<int>(nullable: false),
+                    idEnvio = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Paquete", x => x.idPaquete);
+                    table.ForeignKey(
+                        name: "FK_Paquete_Envio",
+                        column: x => x.idEnvio,
+                        principalTable: "Envio",
+                        principalColumn: "idEnvio",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Paquete_TipoPaquete",
+                        column: x => x.idTipoPaquete,
+                        principalTable: "TipoPaquete",
+                        principalColumn: "idTipoPaquete",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.InsertData(
                 table: "Estado",
-                columns: new[] { "idEstado", "Descripción" },
+                columns: new[] { "idEstado", "Descripcion" },
                 values: new object[,]
                 {
-                    { 1, "En espera" },
-                    { 2, "Despachado" },
-                    { 3, "Ingreso a la sucursal" }
+                    { 1, "Ingreso a la sucursal" },
+                    { 2, "En espera" },
+                    { 3, "Despachado" }
                 });
 
             migrationBuilder.InsertData(
@@ -130,9 +132,9 @@ namespace PS.Template.AccessData.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Envio_CodPaquete",
-                table: "Envio",
-                column: "CodPaquete");
+                name: "IX_Paquete_idEnvio",
+                table: "Paquete",
+                column: "idEnvio");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Paquete_idTipoPaquete",
@@ -153,19 +155,19 @@ namespace PS.Template.AccessData.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Paquete");
+
+            migrationBuilder.DropTable(
                 name: "SucursalPorEnvio");
+
+            migrationBuilder.DropTable(
+                name: "TipoPaquete");
 
             migrationBuilder.DropTable(
                 name: "Envio");
 
             migrationBuilder.DropTable(
                 name: "Estado");
-
-            migrationBuilder.DropTable(
-                name: "Paquete");
-
-            migrationBuilder.DropTable(
-                name: "TipoPaquete");
         }
     }
 }

@@ -34,7 +34,6 @@ namespace PS.Template.Application.Services
                 Peso = paquete.Peso,
                 Dimension = paquete.Dimension,
                 Valor = valorPaquete,
-                CodPaquete = paquete.CodPaquete,
                 IdTipoPaquete = paquete.IdTipoPaquete
             };
 

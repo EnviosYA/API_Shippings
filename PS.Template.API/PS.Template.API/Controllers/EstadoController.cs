@@ -1,28 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PS.Template.Domain.DTO;
 using PS.Template.Domain.Interfaces.Service;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace PS.Template.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     [ApiController]
-    public class PaqueteController : ControllerBase
+    public class EstadoController : ControllerBase
     {
-        private readonly IPaqueteService _service;
-        public PaqueteController(IPaqueteService service)
+        private readonly IEstadoService _service;
+
+        public EstadoController(IEstadoService service)
         {
             _service = service;
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetPaquete(int id)
+        [HttpGet]
+        public IActionResult GetEstados()
         {
             try
             {
-                return new JsonResult(_service.GetPaquete(id)) { StatusCode = 200 };
+                return new JsonResult(_service.GetEstado()) { StatusCode = 200 };
             }
             catch (Exception e)
             {
