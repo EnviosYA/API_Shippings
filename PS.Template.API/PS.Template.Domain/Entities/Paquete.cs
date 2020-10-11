@@ -16,6 +16,9 @@ namespace PS.Template.Domain.Entities
         public int Peso { get; set; }
         public int Valor { get; set; }
         public int CodPaquete { get; set; }
+        public int Largo { get; set; }
+        public int Ancho { get; set; }
+        public int Alto { get; set; }
         public int Dimension { get; set; }
         public int IdTipoPaquete { get; set; }
 

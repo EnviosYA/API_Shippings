@@ -169,19 +169,19 @@ namespace PS.Template.AccessData
                     new Estado
                     {
                         IdEstado = 1,
-                        Descripción = "En espera"
+                        Descripción = "Ingreso a la sucursal"
                     });
                 entity.HasData(
                     new Estado
                     {
                         IdEstado = 2,
-                        Descripción = "Despachado"
+                        Descripción = "En espera"
                     });
                 entity.HasData(
                     new Estado
                     {
                         IdEstado = 3,
-                        Descripción = "Ingreso a la sucursal"
+                        Descripción = "Despachado"
                     });
             });
 
