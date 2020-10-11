@@ -15,3 +15,15 @@ C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1
 C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfo.cs
 C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
 C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.deps.json
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.runtimeconfig.json
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.runtimeconfig.dev.json
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.dll
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csprojAssemblyReference.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfoInputs.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfo.cs
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.genruntimeconfig.cache

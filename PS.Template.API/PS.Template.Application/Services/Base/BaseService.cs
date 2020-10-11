@@ -37,5 +37,10 @@ namespace PS.Template.Application.Services.Base
         {
             Repository.Edit(entity);
         }
+
+        public E GetById(int id)
+        {
+            return Repository.FindById(id);
+        }
     }
 }

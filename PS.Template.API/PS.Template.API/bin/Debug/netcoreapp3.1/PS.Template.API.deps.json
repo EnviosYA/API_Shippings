@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "",
+    "languageVersion": "8.0",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -2542,6 +2542,8 @@
       },
       "PS.Template.Application/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "PS.Template.Domain": "1.0.0"
         },
         "runtime": {
@@ -2552,6 +2554,10 @@
         }
       },
       "PS.Template.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"
+        },
         "runtime": {
           "PS.Template.Domain.dll": {}
         },

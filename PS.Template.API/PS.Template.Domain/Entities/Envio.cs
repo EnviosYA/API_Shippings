@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PS.Template.Domain.Entities
 {
@@ -10,6 +11,7 @@ namespace PS.Template.Domain.Entities
             SucursalPorEnvio = new HashSet<SucursalPorEnvio>();
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdEnvio { get; set; }
         public int IdSucOrigen { get; set; }
         public int IdSucDestino { get; set; }

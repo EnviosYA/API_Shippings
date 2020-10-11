@@ -11,5 +11,6 @@ namespace PS.Template.Domain.Service.Base
         void Delete(E entity);
         void Delete(int id);
         void Edit(E entity);
+        E GetById(int id);
     }
 }

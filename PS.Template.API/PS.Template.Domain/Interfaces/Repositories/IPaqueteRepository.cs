@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PS.Template.Domain.Interfaces.Repositories.Base
+namespace PS.Template.Domain.Interfaces.Repositories
 {
     public interface IPaqueteRepository : IGenericsRepository<Paquete>
     {

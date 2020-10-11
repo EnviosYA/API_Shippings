@@ -12,6 +12,7 @@ namespace PS.Template.Domain.Entities
 
         public int IdTipoPaquete { get; set; }
         public string Descripcion { get; set; }
+        public int Valor { get; set; }
 
         public virtual ICollection<Paquete> Paquete { get; set; }
     }

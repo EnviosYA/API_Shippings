@@ -27,6 +27,22 @@ namespace PS.Template.Domain.Entities
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TipoPaquete>(entity =>
+            {
+                entity.ToTable("TipoPaquete");
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        Descripcion = "Sobre"
+                    });
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        Descripcion = "Caja"
+                    });
+            });
+
+
             modelBuilder.Entity<Envio>(entity =>
             {
                 entity.HasKey(e => e.IdEnvio);

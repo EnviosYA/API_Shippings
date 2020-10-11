@@ -1,4 +1,5 @@
-﻿using PS.Template.Domain.Entities;
+﻿using PS.Template.Domain.DTO;
+using PS.Template.Domain.Entities;
 using PS.Template.Domain.Service.Base;
 using System;
 using System.Collections.Generic;
@@ -8,5 +9,8 @@ namespace PS.Template.Domain.Interfaces.Service
 {
     public interface IPaqueteService : IBaseService<Paquete>
     {
+        public GenericResponseDto CreatePaquete(CreatePaqueteRequestDto paquete);
+
+        public ResponsePaqueteDto GetPaquete(int id);
     }
 }

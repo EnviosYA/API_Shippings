@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PS.Template.Domain.Entities
 {
@@ -10,6 +11,7 @@ namespace PS.Template.Domain.Entities
             Envio = new HashSet<Envio>();
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPaquete { get; set; }
         public int Peso { get; set; }
         public int Valor { get; set; }
