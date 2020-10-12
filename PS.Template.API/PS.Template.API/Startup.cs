@@ -65,6 +65,11 @@ namespace PS.Template.API
             services.AddTransient<IEstadoService, EstadoService>();
             services.AddTransient<IEstadoQuery, EstadoQuery>();
 
+            // Envio
+            services.AddTransient<IEnvioRepository, EnvioRepository>();
+            services.AddTransient<IEnvioService, EnvioService>();
+            services.AddTransient<IEnvioQuery, EnvioQuery>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
