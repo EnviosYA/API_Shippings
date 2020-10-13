@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PS.Template.Domain.DTO;
 using PS.Template.Domain.Interfaces.Service;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,19 @@ namespace PS.Template.API.Controllers
         public EnvioController(IEnvioService service)
         {
             _service = service;
+        }
+
+        [HttpPost]
+        public IActionResult PostEnvioPaquetes(RequestEnvioPaquetesDto request)
+        {
+            try
+            {
+                return new JsonResult(_service.CreateEnvioPaquetes(request)) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

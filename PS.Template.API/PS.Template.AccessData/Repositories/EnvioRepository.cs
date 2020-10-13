@@ -7,10 +7,22 @@ using System.Text;
 
 namespace PS.Template.AccessData.Repositories
 {
-    public class EnvioRepository : GenericsRepository<Envio>, IEnvioRepository
+    public class EnvioRepository : IEnvioRepository
     {
-        public EnvioRepository(BaseDbContext context) : base(context)
+        private readonly BaseDbContext _context;
+        public EnvioRepository(BaseDbContext context)
         {
+            this._context = context;
+        }
+
+        public void Add<T>(T entity) where T : class
+        {
+            this._context.Add(entity);
+        }
+
+        public void SaveChanges()
+        {
+            this._context.SaveChanges();
         }
     }
 }
