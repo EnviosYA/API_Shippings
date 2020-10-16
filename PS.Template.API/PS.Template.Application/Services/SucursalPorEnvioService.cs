@@ -6,7 +6,6 @@ using PS.Template.Domain.Interfaces.Repositories;
 using PS.Template.Domain.Interfaces.Service;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PS.Template.Application.Services
 {
@@ -18,7 +17,7 @@ namespace PS.Template.Application.Services
             _query = query;
         }
 
-        public GenericResponseDto CreateSucEnvio(CreateSucEnvioRequestDto sucEnvio)
+        public ResponseRequestDto CreateSucEnvio(CreateSucEnvioRequestDto sucEnvio)
         {
             var entity = new SucursalPorEnvio
             {
@@ -30,7 +29,7 @@ namespace PS.Template.Application.Services
 
             Add(entity);
 
-            return new GenericResponseDto { Entidad = "SucursalPorEnvio", Id = entity.IdSucursalPorEnvio.ToString() };
+            return new ResponseRequestDto { Codigo = 201, Mensaje = "Seguimiento creado correctamente" };
         }
 
         public List<ResponseSucEnvioDto> GetSucEnvio(int id)

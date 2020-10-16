@@ -1,13 +1,10 @@
 ﻿using PS.Template.Domain.DTO;
-using PS.Template.Domain.Entities;
 using PS.Template.Domain.Interfaces.Query;
 using SqlKata.Compilers;
 using SqlKata.Execution;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 
 namespace PS.Template.AccessData.Query
 {

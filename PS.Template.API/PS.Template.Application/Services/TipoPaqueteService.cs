@@ -1,13 +1,10 @@
 ﻿using PS.Template.Application.Services.Base;
-using PS.Template.Domain.Commands;
 using PS.Template.Domain.DTO;
 using PS.Template.Domain.Entities;
 using PS.Template.Domain.Interfaces.Query;
 using PS.Template.Domain.Interfaces.Repositories;
 using PS.Template.Domain.Interfaces.Service;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PS.Template.Application.Services
 {

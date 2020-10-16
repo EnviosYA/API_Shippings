@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PS.Template.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PS.Template.AccessData
 {

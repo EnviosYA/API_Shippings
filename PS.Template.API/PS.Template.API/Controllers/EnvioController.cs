@@ -2,9 +2,6 @@
 using PS.Template.Domain.DTO;
 using PS.Template.Domain.Interfaces.Service;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PS.Template.API.Controllers
 {

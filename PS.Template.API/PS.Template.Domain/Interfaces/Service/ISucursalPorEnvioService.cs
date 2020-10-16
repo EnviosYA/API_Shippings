@@ -9,7 +9,7 @@ namespace PS.Template.Domain.Interfaces.Service
 {
     public interface ISucursalPorEnvioService : IBaseService<SucursalPorEnvio>
     {
-        public GenericResponseDto CreateSucEnvio(CreateSucEnvioRequestDto sucEnvio);
+        public ResponseRequestDto CreateSucEnvio(CreateSucEnvioRequestDto sucEnvio);
 
         public List<ResponseSucEnvioDto> GetSucEnvio(int id);
     }

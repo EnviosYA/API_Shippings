@@ -1,9 +1,4 @@
-﻿using PS.Template.AccessData.Commands;
-using PS.Template.Domain.Entities;
-using PS.Template.Domain.Interfaces.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PS.Template.Domain.Interfaces.Repositories;
 
 namespace PS.Template.AccessData.Repositories
 {

@@ -35,6 +35,9 @@ namespace PS.Template.Application.Services
             {
                 // Caja
                 case 1:
+                    // Valido que tenga peso y volumen
+                    if (!TienePesoYVolumen(paquetes))
+                        return new ResponseRequestDto { Codigo = 400, Mensaje = "No ingresó peso o medida en algún paquete" };
                     // Validar peso máximo y volumen máximo
                     if (PesoTotal(paquetes) > pesoMax)
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "Supera el peso máximo" };
@@ -49,7 +52,7 @@ namespace PS.Template.Application.Services
                 // Bolsin
                 case 2:
                     // Validar que no ingresó peso o medidas
-                    if (TienePesoVolumen(paquetes))
+                    if (TienePesoOVolumen(paquetes))
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "No debe ingresar peso o medidas" };
                     // Calculo el costo
                     costo = costo * paquetes.Count;
@@ -61,7 +64,7 @@ namespace PS.Template.Application.Services
                     if (paquetes.Count > 1)
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "Solo puede ingresar una carta documento" };
                     // Validar que no ingresó peso o medidas
-                    if (TienePesoVolumen(paquetes))
+                    if (TienePesoOVolumen(paquetes))
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "No debe ingresar peso o medidas" };
                     break;
 
@@ -71,14 +74,14 @@ namespace PS.Template.Application.Services
                     if (paquetes.Count > 1)
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "Solo puede ingresar una carta documento" };
                     // Validar que no ingresó peso o medidas
-                    if (TienePesoVolumen(paquetes))
+                    if (TienePesoOVolumen(paquetes))
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "No debe ingresar peso o medidas" };
                     break;
                 
                 // Carta simple
                 case 5:
                     // Validar que no ingresó peso o medidas
-                    if (TienePesoVolumen(paquetes))
+                    if (TienePesoOVolumen(paquetes))
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "No debe ingresar peso o medidas" };
                     // Calculo el costo
                     costo = costo * paquetes.Count;
@@ -120,6 +123,7 @@ namespace PS.Template.Application.Services
             return new ResponseRequestDto { Codigo = 201, Mensaje = "Envío creado correctamente" };
         }
 
+        // Verifico que los tipos de paquetes sean todos iguales
         public bool ValidarTipoPaquetes(List<PaqueteDto> paquetes)
         {
             int tipoPaquete = paquetes[0].IdTipoPaquete;
@@ -134,6 +138,7 @@ namespace PS.Template.Application.Services
             return iguales;
         }
 
+        // Calcula el costo de las cajas
         public int CalcularCostoPaquetes(List<PaqueteDto> paquetes)
         {
             int costo;
@@ -159,6 +164,7 @@ namespace PS.Template.Application.Services
             return costo;
         }
 
+        // Calcula el peso total de las cajas
         public int PesoTotal(List<PaqueteDto> paquetes)
         {
             int peso = 0;
@@ -169,6 +175,7 @@ namespace PS.Template.Application.Services
             return peso;
         }
 
+        // Calcula el volumen total de las cajas
         public int VolumenTotal(List<PaqueteDto> paquetes)
         {
             int volumen = 0;
@@ -179,7 +186,8 @@ namespace PS.Template.Application.Services
             return volumen;
         }
 
-        public bool TienePesoVolumen(List<PaqueteDto> paquetes)
+        // Verifica si un tipo de paquete tiene peso o medidas
+        public bool TienePesoOVolumen(List<PaqueteDto> paquetes)
         {
             bool tiene = false;
 
@@ -187,6 +195,20 @@ namespace PS.Template.Application.Services
             {
                 if (paquete.Peso != 0 || paquete.Ancho != 0 || paquete.Largo != 0 || paquete.Alto != 0)
                     tiene = true;
+            }
+
+            return tiene;
+        }
+
+        // Verifica si una caja tiene peso y medidas
+        public bool TienePesoYVolumen(List<PaqueteDto> paquetes)
+        {
+            bool tiene = true;
+
+            foreach (PaqueteDto paquete in paquetes)
+            {
+                if (paquete.Peso == 0 || paquete.Ancho == 0 || paquete.Largo == 0 || paquete.Alto == 0)
+                    tiene = false;
             }
 
             return tiene;

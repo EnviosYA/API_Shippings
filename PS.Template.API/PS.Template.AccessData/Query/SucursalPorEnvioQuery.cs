@@ -2,11 +2,9 @@
 using PS.Template.Domain.Interfaces.Query;
 using SqlKata.Compilers;
 using SqlKata.Execution;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 
 namespace PS.Template.AccessData.Query
 {
@@ -28,7 +26,7 @@ namespace PS.Template.AccessData.Query
 
             var result = query.Select("SucursalPorEnvio.IdSucursal AS IdSucursal",
                 "SucursalPorEnvio.Fecha AS Fecha",
-                "Estado.Descripción AS Estado"
+                "Estado.Descripcion AS Estado"
                 )
                 .Join("Estado", "Estado.IdEstado", "SucursalPorEnvio.IdEstado")
                 .Where("SucursalPorEnvio.IdEnvio", "=", id)
