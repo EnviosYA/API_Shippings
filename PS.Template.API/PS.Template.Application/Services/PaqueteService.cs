@@ -20,20 +20,10 @@ namespace PS.Template.Application.Services
 
         public GenericResponseDto CreatePaquete(CreatePaqueteRequestDto paquete)
         {
-            int valor = _query.ValorPaquete(paquete.IdTipoPaquete).Valor;
-
-            int valorPaquete = valor;
-
-            if (paquete.IdTipoPaquete == 1)
-            {
-                valorPaquete += (int)Math.Round(valor + paquete.Peso * 40 + paquete.Dimension * 0.0025);
-            }
-
             var entity = new Paquete
             {
                 Peso = paquete.Peso,
                 Dimension = paquete.Dimension,
-                Valor = valorPaquete,
                 IdTipoPaquete = paquete.IdTipoPaquete
             };
 

@@ -9,7 +9,6 @@ namespace PS.Template.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPaquete { get; set; }
         public int Peso { get; set; }
-        public int Valor { get; set; }
         public int Largo { get; set; }
         public int Ancho { get; set; }
         public int Alto { get; set; }

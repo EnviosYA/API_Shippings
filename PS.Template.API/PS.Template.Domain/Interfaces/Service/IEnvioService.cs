@@ -9,6 +9,6 @@ namespace PS.Template.Domain.Interfaces.Service
 {
     public interface IEnvioService
     {
-        public GenericResponseDto CreateEnvioPaquetes(RequestEnvioPaquetesDto envio);
+        public ResponseRequestDto CreateEnvioPaquetes(RequestEnvioPaquetesDto envio);
     }
 }

@@ -10,7 +10,6 @@ namespace PS.Template.Domain.DTO
         public int IdSucDestino { get; set; }
         public int IdUserOrigen { get; set; }
         public int IdUserDestino { get; set; }
-        public int Costo { get; set; }
         public List<PaqueteDto> Paquetes { get; set; }
     }
 }

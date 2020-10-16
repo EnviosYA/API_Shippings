@@ -35,18 +35,5 @@ namespace PS.Template.AccessData.Query
 
             return query;
         }
-
-        public ValorPaqueteDto ValorPaquete(int tipoPaquete)
-        {
-            var db = new QueryFactory(connection, sqlKataCompiler);
-
-            var query = db.Query("TipoPaquete")
-                .Select("TipoPaquete.Valor")
-                .Where("idTipoPaquete", tipoPaquete)
-                .Get<ValorPaqueteDto>()
-                .FirstOrDefault();
-
-            return query;
-        }
     }
 }
