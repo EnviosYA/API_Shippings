@@ -1,8 +1,5 @@
 ﻿using PS.Template.Domain.Commands;
 using PS.Template.Domain.Service.Base;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PS.Template.Application.Services.Base
 {
@@ -36,6 +33,11 @@ namespace PS.Template.Application.Services.Base
         public virtual void Edit(E entity)
         {
             Repository.Edit(entity);
+        }
+
+        public E GetById(int id)
+        {
+            return Repository.FindById(id);
         }
     }
 }

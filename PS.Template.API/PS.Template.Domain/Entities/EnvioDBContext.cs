@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace PS.Template.Domain.Entities
 {
@@ -23,11 +21,6 @@ namespace PS.Template.Domain.Entities
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=EnvioDB;Trusted_Connection=True;");
-            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -37,8 +30,7 @@ namespace PS.Template.Domain.Entities
                 entity.HasKey(e => e.IdEnvio);
 
                 entity.Property(e => e.IdEnvio)
-                    .HasColumnName("idEnvio")
-                    .ValueGeneratedNever();
+                    .HasColumnName("idEnvio");
 
                 entity.Property(e => e.IdSucDestino).HasColumnName("idSucDestino");
 
@@ -47,12 +39,6 @@ namespace PS.Template.Domain.Entities
                 entity.Property(e => e.IdUserDestino).HasColumnName("idUserDestino");
 
                 entity.Property(e => e.IdUserOrigen).HasColumnName("idUserOrigen");
-
-                entity.HasOne(d => d.CodPaqueteNavigation)
-                    .WithMany(p => p.Envio)
-                    .HasForeignKey(d => d.CodPaquete)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Envio_Paquete");
             });
 
             modelBuilder.Entity<Estado>(entity =>
@@ -63,7 +49,7 @@ namespace PS.Template.Domain.Entities
                     .HasColumnName("idEstado")
                     .ValueGeneratedNever();
 
-                entity.Property(e => e.Descripción)
+                entity.Property(e => e.Descripcion)
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -74,8 +60,15 @@ namespace PS.Template.Domain.Entities
                 entity.HasKey(e => e.IdPaquete);
 
                 entity.Property(e => e.IdPaquete)
-                    .HasColumnName("idPaquete")
-                    .ValueGeneratedNever();
+                    .HasColumnName("idPaquete");
+
+                entity.Property(e => e.IdEnvio).HasColumnName("idEnvio");
+
+                entity.HasOne(d => d.EnvioNavigation)
+                    .WithMany(p => p.Paquete)
+                    .HasForeignKey(d => d.IdEnvio)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Paquete_Envio");
 
                 entity.Property(e => e.IdTipoPaquete).HasColumnName("idTipoPaquete");
 
@@ -91,8 +84,7 @@ namespace PS.Template.Domain.Entities
                 entity.HasKey(e => e.IdSucursalPorEnvio);
 
                 entity.Property(e => e.IdSucursalPorEnvio)
-                    .HasColumnName("idSucursalPorEnvio")
-                    .ValueGeneratedNever();
+                    .HasColumnName("idSucursalPorEnvio");
 
                 entity.Property(e => e.Fecha).HasColumnType("date");
 
@@ -127,6 +119,68 @@ namespace PS.Template.Domain.Entities
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<TipoPaquete>(entity =>
+            {
+                entity.ToTable("TipoPaquete");
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        IdTipoPaquete = 1,
+                        Descripcion = "Caja",
+                        Valor = 600
+                    });
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        IdTipoPaquete = 2,
+                        Descripcion = "Bolsin",
+                        Valor = 500
+                    });
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        IdTipoPaquete = 3,
+                        Descripcion = "Carta documento",
+                        Valor = 950
+                    });
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        IdTipoPaquete = 4,
+                        Descripcion = "Telegrama",
+                        Valor = 500
+                    });
+                entity.HasData(
+                    new TipoPaquete
+                    {
+                        IdTipoPaquete = 5,
+                        Descripcion = "Carta simple",
+                        Valor = 300
+                    });
+            });
+
+            modelBuilder.Entity<Estado>(entity => {
+                entity.ToTable("Estado");
+                entity.HasData(
+                    new Estado
+                    {
+                        IdEstado = 1,
+                        Descripcion = "Ingreso a la sucursal"
+                    });
+                entity.HasData(
+                    new Estado
+                    {
+                        IdEstado = 2,
+                        Descripcion = "En espera"
+                    });
+                entity.HasData(
+                    new Estado
+                    {
+                        IdEstado = 3,
+                        Descripcion = "Despachado"
+                    });
             });
 
             OnModelCreatingPartial(modelBuilder);

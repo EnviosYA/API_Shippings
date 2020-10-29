@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PS.Template.Domain.Entities
 {
     public partial class SucursalPorEnvio
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdSucursalPorEnvio { get; set; }
         public int IdEnvio { get; set; }
         public int IdSucursal { get; set; }

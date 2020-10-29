@@ -21,3 +21,18 @@ C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Application\obj\Debug\netcorea
 C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csproj.CopyComplete
 C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.dll
 C:\Git\EnviosProyecto\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Application.deps.json
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Application.runtimeconfig.json
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Application.runtimeconfig.dev.json
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Application.dll
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Application.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Domain.dll
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\bin\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csprojAssemblyReference.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.AssemblyInfoInputs.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.AssemblyInfo.cs
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csproj.CoreCompileInputs.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csproj.CopyComplete
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.dll
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.pdb
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.genruntimeconfig.cache

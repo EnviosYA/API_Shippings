@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PS.Template.Domain.Service.Base
+﻿namespace PS.Template.Domain.Service.Base
 {
     public interface IBaseService<E> where E : class
     {
@@ -11,5 +7,6 @@ namespace PS.Template.Domain.Service.Base
         void Delete(E entity);
         void Delete(int id);
         void Edit(E entity);
+        E GetById(int id);
     }
 }

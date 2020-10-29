@@ -1,23 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using PS.Template.AccessData;
 using Microsoft.EntityFrameworkCore;
-using PS.Template.Domain.Commands;
-using PS.Template.Domain.Service;
 using PS.Template.Application.Services;
-using PS.Template.AccessData.Commands;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Http;
+using PS.Template.Domain.Interfaces.Repositories;
+using PS.Template.AccessData.Repositories;
+using PS.Template.Domain.Interfaces.Service;
+using PS.Template.Domain.Interfaces.Query;
+using PS.Template.AccessData.Query;
+using SqlKata.Compilers;
+using System.Data;
+using Microsoft.Data.SqlClient;
 
 namespace PS.Template.API
 {
@@ -38,11 +35,40 @@ namespace PS.Template.API
 
             var connectionString = Configuration.GetSection("ConnectionString").Value;
 
+            //EF Core
+            services.AddDbContext<BaseDbContext> (opcion => opcion.UseSqlServer(connectionString));
 
-            services.AddDbContext<BaseDbContext>(opcion => opcion.UseSqlServer(connectionString));
+            //SQLKata
+            services.AddTransient<Compiler, SqlServerCompiler>();
+            services.AddTransient<IDbConnection>(b =>
+            {
+                return new SqlConnection(connectionString);
+            });
 
-            services.AddTransient<IAlumnoRepository, AlumnoRepository>();
-            services.AddTransient<IAlumnoService, AlumnoService>();
+            // Paquete
+            services.AddTransient<IPaqueteRepository, PaqueteRepository>();
+            services.AddTransient<IPaqueteService, PaqueteService>();
+            services.AddTransient<IPaqueteQuery, PaqueteQuery>();
+
+            // Tipo Paquete
+            services.AddTransient<ITipoPaqueteRepository, TipoPaqueteRepository>();
+            services.AddTransient<ITipoPaqueteService, TipoPaqueteService>();
+            services.AddTransient<ITipoPaqueteQuery, TipoPaqueteQuery>();
+
+            // Sucursal por Envío
+            services.AddTransient<ISucursalPorEnvioRepository, SucursalPorEnvioRepository>();
+            services.AddTransient<ISucursalPorEnvioService, SucursalPorEnvioService>();
+            services.AddTransient<ISucursalPorEnvioQuery, SucursalPorEnvioQuery>();
+
+            // Estado
+            services.AddTransient<IEstadoRepository, EstadoRepository>();
+            services.AddTransient<IEstadoService, EstadoService>();
+            services.AddTransient<IEstadoQuery, EstadoQuery>();
+
+            // Envio
+            services.AddTransient<IEnvioRepository, EnvioRepository>();
+            services.AddTransient<IEnvioService, EnvioService>();
+            services.AddTransient<IEnvioQuery, EnvioQuery>();
 
             services.AddSwaggerGen(c =>
             {
@@ -52,6 +78,13 @@ namespace PS.Template.API
                     Title = "MicroService APIs v1.0",
                     Description = "Test services"
                 });
+            });
+
+            services.AddCors(c => {
+                c.AddPolicy("AllowOrigin", options => options
+                                                            .AllowAnyOrigin()
+                                                            .AllowAnyMethod()
+                                                            .AllowAnyHeader());
             });
         }
 
@@ -76,6 +109,13 @@ namespace PS.Template.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(options =>
+            {
+                options.AllowAnyMethod();
+                options.AllowAnyHeader();
+                options.AllowAnyOrigin();
+            });
 
             app.UseAuthorization();
 

@@ -5741,19 +5741,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Shiki\\.nuget\\packages\\": {}
+    "C:\\Users\\Dami_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Dami_\\Documents\\Proyecto de Software\\ProyectoEnvios\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
       "projectName": "PS.Template.Application",
-      "projectPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
-      "packagesPath": "C:\\Users\\Shiki\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Application\\obj\\",
+      "projectPath": "C:\\Users\\Dami_\\Documents\\Proyecto de Software\\ProyectoEnvios\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
+      "packagesPath": "C:\\Users\\Dami_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dami_\\Documents\\Proyecto de Software\\ProyectoEnvios\\PS.Template.API\\PS.Template.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Shiki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dami_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5766,8 +5766,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
-              "projectPath": "C:\\Git\\EnviosProyecto\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj"
+            "C:\\Users\\Dami_\\Documents\\Proyecto de Software\\ProyectoEnvios\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
+              "projectPath": "C:\\Users\\Dami_\\Documents\\Proyecto de Software\\ProyectoEnvios\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj"
             }
           }
         }
@@ -5811,7 +5811,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
