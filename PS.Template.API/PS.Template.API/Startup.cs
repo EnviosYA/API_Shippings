@@ -112,9 +112,9 @@ namespace PS.Template.API
 
             app.UseCors(options =>
             {
+                options.AllowAnyOrigin();
                 options.AllowAnyMethod();
                 options.AllowAnyHeader();
-                options.AllowAnyOrigin();
             });
 
             app.UseAuthorization();
