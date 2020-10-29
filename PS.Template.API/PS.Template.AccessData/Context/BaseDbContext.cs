@@ -174,13 +174,25 @@ namespace PS.Template.AccessData
                     new Estado
                     {
                         IdEstado = 2,
-                        Descripcion = "En espera"
+                        Descripcion = "En proceso"
                     });
                 entity.HasData(
                     new Estado
                     {
                         IdEstado = 3,
                         Descripcion = "Despachado"
+                    });
+                entity.HasData(
+                    new Estado
+                    {
+                        IdEstado = 4,
+                        Descripcion = "En viaje al domicilio del destinatiario"
+                    });
+                entity.HasData(
+                    new Estado
+                    {
+                        IdEstado = 5,
+                        Descripcion = "Entregado"
                     });
             });
 
