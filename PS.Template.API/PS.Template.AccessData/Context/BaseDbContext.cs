@@ -33,11 +33,7 @@ namespace PS.Template.AccessData
                 entity.Property(e => e.IdEnvio)
                     .HasColumnName("idEnvio");
 
-                entity.Property(e => e.IdSucDestino).HasColumnName("idSucDestino");
-
-                entity.Property(e => e.IdSucOrigen).HasColumnName("idSucOrigen");
-
-                entity.Property(e => e.IdUserDestino).HasColumnName("idUserDestino");
+                entity.Property(e => e.IdDireccionDestino).HasColumnName("idDireccionDestino");
 
                 entity.Property(e => e.IdUserOrigen).HasColumnName("idUserOrigen");
             });

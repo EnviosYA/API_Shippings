@@ -13,10 +13,8 @@ namespace PS.Template.Domain.Entities
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdEnvio { get; set; }
-        public int IdSucOrigen { get; set; }
-        public int IdSucDestino { get; set; }
         public int IdUserOrigen { get; set; }
-        public int IdUserDestino { get; set; }
+        public int IdDireccionDestino { get; set; }
         public int Costo { get; set; }
 
         public virtual ICollection<Paquete> Paquete { get; set; }

@@ -91,11 +91,9 @@ namespace PS.Template.Application.Services
                     return new ResponseRequestDto { Codigo = 400, Mensaje = "Tipo de paquete inválido" };
             }
 
-            var entityEnvio = new Envio { 
-                IdSucOrigen = envio.IdSucOrigen,
-                IdSucDestino = envio.IdSucDestino,
+            var entityEnvio = new Envio {
                 IdUserOrigen = envio.IdUserOrigen,
-                IdUserDestino = envio.IdUserDestino,
+                IdDireccionDestino = envio.IdDireccionDestino,
                 Costo = costo
             };
 
