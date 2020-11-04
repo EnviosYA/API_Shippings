@@ -23,7 +23,7 @@ C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csprojAssemblyReference.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfoInputs.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfo.cs
-C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.genruntimeconfig.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache

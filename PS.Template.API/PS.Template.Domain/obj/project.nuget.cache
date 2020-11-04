@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U1F/kgtJjBpOqNTheVoavUz6J8dqBiBRUMgGOexEQxKimudLwbdPvYOaSNSL6td85ee3bc4AyFJfUlzFCuyOYQ==",
+  "dgSpecHash": "cTxoj/7PQYzE/LBUG3VYF3dFRRbicIMlvrzd/+mpmLk76977QanVHflbMFUyVR1RGzHRFN0uufDJ+L5bXVLnqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dami_\\Documents\\Proyecto de Software\\ProyectoEnvios\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\Dami_\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Dami_\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Dami_\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\Dami_\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\Dami_\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Dami_\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Dami_\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

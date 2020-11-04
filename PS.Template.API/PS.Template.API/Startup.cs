@@ -15,6 +15,8 @@ using PS.Template.AccessData.Query;
 using SqlKata.Compilers;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using PS.Template.Domain.Interfaces.RequestApis;
+using PS.Template.Application.RequestAPis;
 
 namespace PS.Template.API
 {
@@ -70,6 +72,9 @@ namespace PS.Template.API
             services.AddTransient<IEnvioService, EnvioService>();
             services.AddTransient<IEnvioQuery, EnvioQuery>();
 
+            // Microservicios
+            services.AddTransient<IGenerateRequest, GenerateRequest>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -86,6 +91,8 @@ namespace PS.Template.API
                                                             .AllowAnyMethod()
                                                             .AllowAnyHeader());
             });
+
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

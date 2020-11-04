@@ -31,8 +31,8 @@ C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csprojAssemblyReference.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.AssemblyInfoInputs.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.AssemblyInfo.cs
-C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csproj.CoreCompileInputs.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csproj.CopyComplete
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.dll
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.pdb
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.genruntimeconfig.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Application\obj\Debug\netcoreapp3.1\PS.Template.Application.csproj.CoreCompileInputs.cache

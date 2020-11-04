@@ -11,6 +11,6 @@ namespace PS.Template.Domain.Interfaces.Service
     {
         public ResponseRequestDto CreateSucEnvio(CreateSucEnvioRequestDto sucEnvio);
 
-        public List<ResponseSucEnvioDto> GetSucEnvio(int id);
+        public List<ResponseSeguimientoDto> GetSucEnvio(int id);
     }
 }
