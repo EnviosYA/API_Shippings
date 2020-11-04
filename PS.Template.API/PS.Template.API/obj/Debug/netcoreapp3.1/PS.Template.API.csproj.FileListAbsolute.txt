@@ -514,3 +514,4 @@ C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.API\obj\Debug\netcoreapp3.1\PS.Template.API.dll
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.API\obj\Debug\netcoreapp3.1\PS.Template.API.pdb
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.API\obj\Debug\netcoreapp3.1\PS.Template.API.genruntimeconfig.cache
+C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.API\bin\Debug\netcoreapp3.1\RestSharp.dll

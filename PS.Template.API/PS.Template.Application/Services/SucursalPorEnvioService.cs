@@ -3,18 +3,25 @@ using PS.Template.Domain.DTO;
 using PS.Template.Domain.Entities;
 using PS.Template.Domain.Interfaces.Query;
 using PS.Template.Domain.Interfaces.Repositories;
+using PS.Template.Domain.Interfaces.RequestApis;
 using PS.Template.Domain.Interfaces.Service;
+using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PS.Template.Application.Services
 {
     public class SucursalPorEnvioService : BaseService<SucursalPorEnvio>, ISucursalPorEnvioService
     {
         private readonly ISucursalPorEnvioQuery _query;
-        public SucursalPorEnvioService(ISucursalPorEnvioRepository repository, ISucursalPorEnvioQuery query) : base(repository)
+        private readonly IGenerateRequest _request;
+
+        public SucursalPorEnvioService(ISucursalPorEnvioRepository repository, 
+            ISucursalPorEnvioQuery query, IGenerateRequest generate) : base(repository)
         {
             _query = query;
+            _request = generate;
         }
 
         public ResponseRequestDto CreateSucEnvio(CreateSucEnvioRequestDto sucEnvio)
@@ -32,9 +39,34 @@ namespace PS.Template.Application.Services
             return new ResponseRequestDto { Codigo = 201, Mensaje = "Seguimiento creado correctamente" };
         }
 
-        public List<ResponseSucEnvioDto> GetSucEnvio(int id)
+        public List<ResponseSeguimientoDto> GetSucEnvio(int id)
         {
-            return _query.GetSucEnvio(id);
+            List<ResponseSucEnvioDto> sucPorEnvio = _query.GetSucEnvio(id);
+            ResponseGetSucursal sucursal;
+            List<ResponseSeguimientoDto> seguimientos = new List<ResponseSeguimientoDto>();
+
+            foreach(ResponseSucEnvioDto seguimiento in sucPorEnvio)
+            {
+                sucursal = GetDataApi(seguimiento.IdSucursal).First();
+                seguimientos.Add(new ResponseSeguimientoDto
+                {
+                    Estado = seguimiento.Estado,
+                    Fecha = seguimiento.Fecha,
+                    Nombre = sucursal.Nombre,
+                    Latitud = sucursal.Latitud,
+                    Longitud = sucursal.Longitud
+                });
+            }
+            return seguimientos;
+        }
+        public IEnumerable<ResponseGetSucursal> GetDataApi(int idSucursal)
+        {
+            string uri = _request.GetUri();
+            RestRequest request = new RestRequest(Method.GET);
+            request.AddQueryParameter("idSucursal", idSucursal.ToString());
+            IEnumerable<ResponseGetSucursal> sucursal = _request.ConsultarApiRest<ResponseGetSucursal>(uri, request);
+
+            return sucursal;
         }
     }
 }
