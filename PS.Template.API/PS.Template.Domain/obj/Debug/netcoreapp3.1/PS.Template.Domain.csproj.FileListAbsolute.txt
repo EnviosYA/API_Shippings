@@ -27,3 +27,15 @@ C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.genruntimeconfig.cache
 C:\Users\Dami_\Documents\Proyecto de Software\ProyectoEnvios\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.deps.json
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.runtimeconfig.json
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.runtimeconfig.dev.json
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.dll
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csprojAssemblyReference.cache
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfoInputs.cache
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfo.cs
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.genruntimeconfig.cache

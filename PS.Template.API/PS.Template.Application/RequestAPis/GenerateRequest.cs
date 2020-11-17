@@ -24,15 +24,16 @@ namespace PS.Template.Application.RequestAPis
         public string GetUri()
         {
             string uri = _configuration.GetSection("URL:URI_SUCURSAL").Value;
-            
+
             return uri;
         }
 
-        public IEnumerable<T> ConsultarApiRest<T>(string uri, RestRequest request)
+        public List<T> ConsultarApiRest<T>(string uri, RestRequest request)
         {
             IRestClient client;
             IRestResponse queryResult;
-            IEnumerable<T> hash = null;
+            List<T> hash = null;
+            T instancia;
             var headers = new Dictionary<string, string>
             {
                 { "Content-Type", "application/json" },
@@ -45,10 +46,18 @@ namespace PS.Template.Application.RequestAPis
                 request.AddHeaders(headers);
                 request.RequestFormat = DataFormat.Json;
                 queryResult = client.Execute(request);
-                
-                if (queryResult.StatusCode == HttpStatusCode.OK)
+
+                if (queryResult.ResponseStatus == ResponseStatus.Completed)
                 {
-                    hash = JsonConvert.DeserializeObject<IList<T>>(queryResult.Content);
+                    if (queryResult.Content.Contains("["))
+                    {
+                        hash = JsonConvert.DeserializeObject<List<T>>(queryResult.Content);
+                    }
+                    else
+                    {
+                        instancia = JsonConvert.DeserializeObject<T>(queryResult.Content);
+                        hash.Add(instancia);
+                    }
                 }
             }
             catch (Exception ex)

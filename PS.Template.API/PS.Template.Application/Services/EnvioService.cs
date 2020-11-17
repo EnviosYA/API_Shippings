@@ -2,8 +2,12 @@
 using PS.Template.Domain.Entities;
 using PS.Template.Domain.Interfaces.Query;
 using PS.Template.Domain.Interfaces.Repositories;
+using PS.Template.Domain.Interfaces.RequestApis;
 using PS.Template.Domain.Interfaces.Service;
+using RestSharp;
 using System.Collections.Generic;
+using System.Linq;
+using TP2.REST.Domain.DTO;
 
 namespace PS.Template.Application.Services
 {
@@ -11,11 +15,13 @@ namespace PS.Template.Application.Services
     {
         private readonly IEnvioRepository _repository;
         private readonly IEnvioQuery _query;
+        private readonly IGenerateRequest _generateRequest;
 
-        public EnvioService(IEnvioRepository repository, IEnvioQuery query)
+        public EnvioService(IEnvioRepository repository, IEnvioQuery query, IGenerateRequest generateRequest)
         {
-            this._repository = repository;
-            this._query = query;
+            _repository = repository;
+            _query = query;
+            _generateRequest = generateRequest;
         }
 
         public ResponseRequestDto CreateEnvioPaquetes(RequestEnvioPaquetesDto envio)
@@ -92,8 +98,8 @@ namespace PS.Template.Application.Services
             }
 
             var entityEnvio = new Envio {
-                IdUserOrigen = envio.IdUserOrigen,
-                IdDireccionDestino = envio.IdDireccionDestino,
+                IdUserOrigen = ObtenerIdSuc(envio.DireccionOrigen),
+                IdDireccionDestino = ObtenerIdSuc(envio.DireccionDestino),
                 Costo = costo
             };
 
@@ -211,5 +217,15 @@ namespace PS.Template.Application.Services
 
             return tiene;
         }
+        
+        // 
+        public int ObtenerIdSuc(DireccionDTO direccion)
+        {
+            string uri = _generateRequest.GetUri();
+            RestRequest request = new RestRequest(Method.POST);
+            request.AddJsonBody(direccion);
+            GenericCreatedResponseDTO user = _generateRequest.ConsultarApiRest<GenericCreatedResponseDTO>(uri, request).First();
+            return int.Parse(user.Id);
+        }
     }
-}
+}   

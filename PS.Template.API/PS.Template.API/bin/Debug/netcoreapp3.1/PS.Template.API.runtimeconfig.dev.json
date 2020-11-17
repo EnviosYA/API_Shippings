@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Dami_\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Dami_\\.nuget\\packages"
+      "C:\\Users\\LeanLima\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\LeanLima\\.nuget\\packages"
     ]
   }
 }
