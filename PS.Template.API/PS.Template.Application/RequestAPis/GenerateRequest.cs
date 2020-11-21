@@ -21,10 +21,18 @@ namespace PS.Template.Application.RequestAPis
             _contextAccessor = contextAccessor;
         }
 
-        public string GetUri()
+        public string GetUri(int opcion)
         {
-            string uri = _configuration.GetSection("URL:URI_SUCURSAL").Value;
-
+            string uri = "";
+            switch (opcion)
+            {
+                case 1:
+                    uri = _configuration.GetSection("URL:URI_SUCURSAL").Value;
+                    break;
+                case 2:
+                    uri = _configuration.GetSection("URL:URI_USUARIO").Value;
+                    break;
+            }
             return uri;
         }
 

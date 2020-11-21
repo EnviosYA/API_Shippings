@@ -61,7 +61,7 @@ namespace PS.Template.Application.Services
         }
         public IEnumerable<ResponseGetSucursal> GetDataApi(int idSucursal)
         {
-            string uri = _request.GetUri();
+            string uri = _request.GetUri(1);
             RestRequest request = new RestRequest(Method.GET);
             request.AddQueryParameter("idSucursal", idSucursal.ToString());
             IEnumerable<ResponseGetSucursal> sucursal = _request.ConsultarApiRest<ResponseGetSucursal>(uri, request);

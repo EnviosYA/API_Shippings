@@ -98,8 +98,8 @@ namespace PS.Template.Application.Services
             }
 
             var entityEnvio = new Envio {
-                IdUserOrigen = ObtenerIdSuc(envio.DireccionOrigen),
-                IdDireccionDestino = ObtenerIdSuc(envio.DireccionDestino),
+                IdUserOrigen = ObtenerIdDirUser(envio.idUsuario),
+                IdDireccionDestino = ObtenerIdDirDestino(envio.DireccionDestino),
                 Costo = costo
             };
 
@@ -118,12 +118,10 @@ namespace PS.Template.Application.Services
                     IdTipoPaquete = paquete.IdTipoPaquete,
                     IdEnvio = entityEnvio.IdEnvio
                 };
-
                 this._repository.Add<Paquete>(entityPaquete);
             }
 
             this._repository.SaveChanges();
-
             return new ResponseRequestDto { Codigo = 201, Mensaje = "Envío creado correctamente" };
         }
 
@@ -218,14 +216,24 @@ namespace PS.Template.Application.Services
             return tiene;
         }
         
-        // 
-        public int ObtenerIdSuc(DireccionDTO direccion)
+        // Obtengo Id Direccion Destino
+        public int ObtenerIdDirDestino(DireccionDTO direccion)
         {
-            string uri = _generateRequest.GetUri();
+            string uri = _generateRequest.GetUri(1);
             RestRequest request = new RestRequest(Method.POST);
             request.AddJsonBody(direccion);
             GenericCreatedResponseDTO user = _generateRequest.ConsultarApiRest<GenericCreatedResponseDTO>(uri, request).First();
             return int.Parse(user.Id);
         }
+
+        // Obtener Direccion de un usuario
+        public int ObtenerIdDirUser(int iduser)
+        {
+            string uri = _generateRequest.GetUri(2);
+            RestRequest request = new RestRequest(Method.GET);
+            request.AddQueryParameter("id", iduser.ToString());
+            ResponseUsuarios user = _generateRequest.ConsultarApiRest<ResponseUsuarios>(uri, request).First();
+            return user.IdDireccion;
+        }
     }
-}   
+}
