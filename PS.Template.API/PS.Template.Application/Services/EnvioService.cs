@@ -122,7 +122,7 @@ namespace PS.Template.Application.Services
             }
 
             this._repository.SaveChanges();
-            return new ResponseRequestDto { Codigo = 201, Mensaje = "Envío creado correctamente" };
+            return new ResponseRequestDto { Codigo = 201, Mensaje = "Envío creado correctamente", Id = entityEnvio.IdEnvio };
         }
 
         // Verifico que los tipos de paquetes sean todos iguales
@@ -219,7 +219,7 @@ namespace PS.Template.Application.Services
         // Obtengo Id Direccion Destino
         public int ObtenerIdDirDestino(DireccionDTO direccion)
         {
-            string uri = _generateRequest.GetUri(1);
+            string uri = _generateRequest.GetUri(3);
             RestRequest request = new RestRequest(Method.POST);
             request.AddJsonBody(direccion);
             GenericCreatedResponseDTO user = _generateRequest.ConsultarApiRest<GenericCreatedResponseDTO>(uri, request).First();
