@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj": {}
+    "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj": {}
   },
   "projects": {
-    "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj": {
+    "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
+        "projectUniqueName": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
         "projectName": "PS.Template.Application",
-        "projectPath": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
-        "packagesPath": "C:\\Users\\LeanLima\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Application\\obj\\",
+        "projectPath": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Application\\PS.Template.Application.csproj",
+        "packagesPath": "C:\\Users\\Ciro\\.nuget\\packages\\",
+        "outputPath": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeanLima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ciro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,10 +26,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
-                "projectPath": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj"
+              "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
+                "projectPath": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj"
               }
             }
           }
@@ -42,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
@@ -86,21 +84,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
+    "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
+        "projectUniqueName": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
         "projectName": "PS.Template.Domain",
-        "projectPath": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
-        "packagesPath": "C:\\Users\\LeanLima\\.nuget\\packages\\",
-        "outputPath": "D:\\Archivos\\Documentos\\Trabajo Proyecto Software\\API_ENVIOS\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\obj\\",
+        "projectPath": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\PS.Template.Domain.csproj",
+        "packagesPath": "C:\\Users\\Ciro\\.nuget\\packages\\",
+        "outputPath": "H:\\Archivos\\Facu\\3er año\\Proyecto Software\\PROYECTO Envios ya!\\API_Sucursal\\API_Shippings\\PS.Template.API\\PS.Template.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LeanLima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ciro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,7 +110,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -124,7 +121,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -160,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
