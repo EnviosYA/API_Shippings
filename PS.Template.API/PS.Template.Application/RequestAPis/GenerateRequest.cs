@@ -32,6 +32,9 @@ namespace PS.Template.Application.RequestAPis
                 case 2:
                     uri = _configuration.GetSection("URL:URI_USUARIO").Value;
                     break;
+                case 3:
+                    uri = _configuration.GetSection("URL:URI_DIRECCION").Value;
+                    break;
             }
             return uri;
         }
@@ -40,7 +43,7 @@ namespace PS.Template.Application.RequestAPis
         {
             IRestClient client;
             IRestResponse queryResult;
-            List<T> hash = null;
+            List<T> hash = new List<T>();
             T instancia;
             var headers = new Dictionary<string, string>
             {
