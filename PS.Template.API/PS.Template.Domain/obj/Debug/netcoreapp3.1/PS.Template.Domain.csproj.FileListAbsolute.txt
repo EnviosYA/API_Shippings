@@ -39,3 +39,15 @@ D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Tem
 D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
 D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
 D:\Archivos\Documentos\Trabajo Proyecto Software\API_ENVIOS\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.genruntimeconfig.cache
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.deps.json
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.runtimeconfig.json
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.runtimeconfig.dev.json
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.dll
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\bin\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csprojAssemblyReference.cache
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfoInputs.cache
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.AssemblyInfo.cs
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.csproj.CoreCompileInputs.cache
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.dll
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.pdb
+H:\Archivos\Facu\3er año\Proyecto Software\PROYECTO Envios ya!\API_Sucursal\API_Shippings\PS.Template.API\PS.Template.Domain\obj\Debug\netcoreapp3.1\PS.Template.Domain.genruntimeconfig.cache
